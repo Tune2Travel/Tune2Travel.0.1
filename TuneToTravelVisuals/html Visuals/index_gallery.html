@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Tune To Travel — Visual Gallery</title>
+<style>
+  :root {
+    --bg:#12161f; --panel:#191f2b; --text:#eaf0f7; --muted:#9fb0c7;
+    --accent:#7b61ff; --card:#0f1520; --border:#2a3550;
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Arial,'Noto Sans'; line-height:1.45; }
+
+  .controls { position:sticky; top:0; z-index:5; display:flex; gap:8px; align-items:center;
+    padding:10px 12px; border-bottom:1px solid var(--border); background:rgba(0,0,0,.18); backdrop-filter:blur(4px); }
+  .btn { cursor:pointer; border:1px solid var(--border); border-radius:8px; padding:6px 10px; background:#0e1320; color:var(--text); font-size:13px; }
+  .btn.small { padding:4px 8px; font-size:12px; }
+  .btn:hover { border-color:var(--accent); color:var(--accent); }
+
+  /* Layout: start COLLAPSED, open with .nav-open */
+  .layout { display:grid; grid-template-columns:0 1fr; min-height:100vh; transition:grid-template-columns .25s ease; }
+  .layout.nav-open { grid-template-columns:280px 1fr; }
+  .layout:not(.nav-open) nav { width:0 !important; padding:0 !important; border-right:0 !important; overflow:hidden !important; opacity:0; pointer-events:none; }
+  .layout.nav-open nav { width:auto; opacity:1; pointer-events:auto; }
+
+  nav { background:var(--panel); padding:18px; border-right:1px solid var(--border);
+        position:sticky; top:46px; height:calc(100vh - 46px); overflow:auto; }
+  nav h1 { font-size:18px; margin:0 0 12px; }
+  nav .desc { color:var(--muted); font-size:12px; margin-bottom:10px; }
+  nav ul { list-style:none; padding:0; margin:0; }
+  nav li { margin:6px 0; }
+  nav li.block { margin-top:14px; font-weight:700; }
+  nav li.sub { margin-left:10px; font-weight:600; }
+  nav a { color:var(--text); text-decoration:none; font-size:13px; }
+  nav a:hover { color:var(--accent); text-decoration:underline; }
+
+  main { padding:18px; }
+  h1.main-title { margin:8px 0 14px; font-size:22px; }
+  .super-section > h2 { margin:16px 0 10px; font-size:20px; }
+  .sub-section > h3 { margin:10px 0 8px; font-size:17px; }
+
+  .grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(520px, 1fr)); gap:18px; align-items:start; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:14px; }
+  .card h4 { font-size:15px; margin:0 0 6px; }
+  .card .meta { color:var(--muted); font-size:12px; margin-bottom:8px; }
+
+  .frame-wrap { width:100%; height:680px; border:0; overflow:hidden; border-radius:10px; }
+  .frame-wrap iframe { width:100%; height:100%; border:0; background:#fff; }
+  .img-wrap img { width:100%; height:auto; display:block; border-radius:10px; background:#fff; }
+
+  .empty { color:var(--muted); font-style:italic; padding:8px 0 16px; }
+
+  @media (max-width:1200px) { .wf-columns { grid-template-columns:1fr; } }
+  @media (max-width:900px)  { .layout, .layout.nav-open { grid-template-columns:1fr; } nav { display:none; } }
+
+  /* Workflows two columns */
+  .wf-columns { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+  .wf-col h3 { margin:10px 0 8px; font-size:17px; }
+</style>
+</head>
+<body>
+  <div class="controls">
+    <button class="btn" id="toggle-nav" aria-expanded="false">Contents</button>
+    <span style="opacity:.8">Folder: <code>D:\See_You\motif_plots</code></span>
+  </div>
+
+  <div id="layout" class="layout">
+    <nav id="sidebar">
+      <h1>Contents</h1>
+      <div class="desc">Click to navigate</div>
+      <ul><li class="block"><a href="#topic-modeling">Topic Modeling</a></li>
+<li class="sub"><a href="#topic-modeling-see">See You Again</a></li>
+<li><a href="#topic-modeling-see-1">adj_see_new_total_counts.html</a></li>
+<li><a href="#topic-modeling-see-2">adj_see_new_total_freq.html</a></li>
+<li><a href="#topic-modeling-see-3">adj_see_new_yearly_counts.html</a></li>
+<li><a href="#topic-modeling-see-4">adj_see_new_yearly_freq.html</a></li>
+<li class="sub"><a href="#topic-modeling-despa">Despacito</a></li>
+<li><a href="#topic-modeling-despa-5">despa_total_comment_counts.html</a></li>
+<li><a href="#topic-modeling-despa-6">despa_total_motif_frequency.html</a></li>
+<li><a href="#topic-modeling-despa-7">despa_yearly_comment_counts.html</a></li>
+<li><a href="#topic-modeling-despa-8">despa_yearly_motif_frequency.html</a></li>
+<li class="block"><a href="#workflows">Workflows</a></li>
+<li><a href="#workflows-see-9">sya_workflow.png</a></li>
+<li><a href="#workflows-despa-10">despa_workflow.png</a></li>
+<li><a href="#workflows-despa-11">despa_workflow1.png</a></li>
+<li><a href="#workflows-despa-12">despa_workflow2.png</a></li>
+<li><a href="#workflows-despa-13">despa_workflow3.png</a></li>
+<li class="block"><a href="#travel">Travel</a></li>
+<li class="sub"><a href="#travel-despa-travel">Despacito — Travel</a></li>
+<li><a href="#travel-despa-travel-14">despa_travel_1.png</a></li>
+<li><a href="#travel-despa-travel-15">despa_travel_2.png</a></li></ul>
+    </nav>
+
+    <main>
+      <h1 class="main-title">Tune To Travel — Visual Gallery</h1>
+      <section class="super-section" id="topic-modeling"><h2>Topic Modeling</h2>
+      <div class="sub-section" id="topic-modeling-see">
+        <h3>See You Again</h3>
+        <div class="grid">
+          
+      <section id="topic-modeling-see-1" class="card">
+        <h4>Total Comment Counts per Motif</h4>
+        <div class="meta">adj_see_new_total_counts.html</div>
+        <div class="frame-wrap"><iframe src="adj_see_new_total_counts.html" loading="lazy" title="Total Comment Counts per Motif"></iframe></div>
+      </section>
+      <section id="topic-modeling-see-2" class="card">
+        <h4>Total Motif Frequency</h4>
+        <div class="meta">adj_see_new_total_freq.html</div>
+        <div class="frame-wrap"><iframe src="adj_see_new_total_freq.html" loading="lazy" title="Total Motif Frequency"></iframe></div>
+      </section>
+      <section id="topic-modeling-see-3" class="card">
+        <h4>Yearly Comment Counts</h4>
+        <div class="meta">adj_see_new_yearly_counts.html</div>
+        <div class="frame-wrap"><iframe src="adj_see_new_yearly_counts.html" loading="lazy" title="Yearly Comment Counts"></iframe></div>
+      </section>
+      <section id="topic-modeling-see-4" class="card">
+        <h4>Yearly Motif Frequency</h4>
+        <div class="meta">adj_see_new_yearly_freq.html</div>
+        <div class="frame-wrap"><iframe src="adj_see_new_yearly_freq.html" loading="lazy" title="Yearly Motif Frequency"></iframe></div>
+      </section>
+        </div>
+      </div>
+      <div class="sub-section" id="topic-modeling-despa">
+        <h3>Despacito</h3>
+        <div class="grid">
+          
+      <section id="topic-modeling-despa-5" class="card">
+        <h4>Despa Total Comment Counts</h4>
+        <div class="meta">despa_total_comment_counts.html</div>
+        <div class="frame-wrap"><iframe src="despa_total_comment_counts.html" loading="lazy" title="Despa Total Comment Counts"></iframe></div>
+      </section>
+      <section id="topic-modeling-despa-6" class="card">
+        <h4>Total Motif Frequency</h4>
+        <div class="meta">despa_total_motif_frequency.html</div>
+        <div class="frame-wrap"><iframe src="despa_total_motif_frequency.html" loading="lazy" title="Total Motif Frequency"></iframe></div>
+      </section>
+      <section id="topic-modeling-despa-7" class="card">
+        <h4>Despa Yearly Comment Counts</h4>
+        <div class="meta">despa_yearly_comment_counts.html</div>
+        <div class="frame-wrap"><iframe src="despa_yearly_comment_counts.html" loading="lazy" title="Despa Yearly Comment Counts"></iframe></div>
+      </section>
+      <section id="topic-modeling-despa-8" class="card">
+        <h4>Yearly Motif Frequency</h4>
+        <div class="meta">despa_yearly_motif_frequency.html</div>
+        <div class="frame-wrap"><iframe src="despa_yearly_motif_frequency.html" loading="lazy" title="Yearly Motif Frequency"></iframe></div>
+      </section>
+        </div>
+      </div></section>
+
+    <section class="super-section" id="workflows">
+      <h2>Workflows</h2>
+      <div class="wf-columns">
+        <div class="wf-col">
+          <h3>See You Again — Workflow(s)</h3>
+          <div class="grid">
+      <section id="workflows-see-9" class="card">
+        <h4>See You Again — Workflow</h4>
+        <div class="meta">sya_workflow.png</div>
+        <div class="img-wrap"><img src="sya_workflow.png" alt="See You Again — Workflow" loading="lazy"/></div>
+      </section></div>
+        </div>
+        <div class="wf-col">
+          <h3>Despacito — Workflow(s)</h3>
+          <div class="grid">
+      <section id="workflows-despa-10" class="card">
+        <h4>Despacito — Workflow</h4>
+        <div class="meta">despa_workflow.png</div>
+        <div class="img-wrap"><img src="despa_workflow.png" alt="Despacito — Workflow" loading="lazy"/></div>
+      </section>
+      <section id="workflows-despa-11" class="card">
+        <h4>Despacito — Workflow</h4>
+        <div class="meta">despa_workflow1.png</div>
+        <div class="img-wrap"><img src="despa_workflow1.png" alt="Despacito — Workflow" loading="lazy"/></div>
+      </section>
+      <section id="workflows-despa-12" class="card">
+        <h4>Despacito — Workflow</h4>
+        <div class="meta">despa_workflow2.png</div>
+        <div class="img-wrap"><img src="despa_workflow2.png" alt="Despacito — Workflow" loading="lazy"/></div>
+      </section>
+      <section id="workflows-despa-13" class="card">
+        <h4>Despacito — Workflow</h4>
+        <div class="meta">despa_workflow3.png</div>
+        <div class="img-wrap"><img src="despa_workflow3.png" alt="Despacito — Workflow" loading="lazy"/></div>
+      </section></div>
+        </div>
+      </div>
+    </section>
+    
+<section class="super-section" id="travel"><h2>Travel</h2>
+      <div class="sub-section" id="travel-despa-travel">
+        <h3>Despacito — Travel</h3>
+        <div class="grid">
+          
+      <section id="travel-despa-travel-14" class="card">
+        <h4>Despacito — Travel Results</h4>
+        <div class="meta">despa_travel_1.png</div>
+        <div class="img-wrap"><img src="despa_travel_1.png" alt="Despacito — Travel Results" loading="lazy"/></div>
+      </section>
+      <section id="travel-despa-travel-15" class="card">
+        <h4>Despacito — Travel Results</h4>
+        <div class="meta">despa_travel_2.png</div>
+        <div class="img-wrap"><img src="despa_travel_2.png" alt="Despacito — Travel Results" loading="lazy"/></div>
+      </section>
+        </div>
+      </div></section>
+    </main>
+  </div>
+
+<script>
+  const layout = document.getElementById('layout');
+  const toggle = document.getElementById('toggle-nav');
+  const NAV_OPEN = 'nav-open';
+  // start collapsed
+  layout.classList.remove(NAV_OPEN);
+  toggle.setAttribute('aria-expanded','false');
+  toggle.addEventListener('click', () => {
+    const open = layout.classList.toggle(NAV_OPEN);
+    toggle.setAttribute('aria-expanded', String(open));
+  });
+</script>
+</body>
+</html>

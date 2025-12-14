@@ -1,0 +1,21 @@
+name: project-main-release-Yeliz-Yucel
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+      - bertopic
+      - sentence-transformers
+      - umap-learn
+      - hdbscan
+      - scikit-learn
+      - pandas
+      - numpy
+      - matplotlib
+      - plotly
+      - emoji
+      - regex
+      - tqdm
+      - nltk

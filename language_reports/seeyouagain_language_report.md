@@ -1,0 +1,60 @@
+# Language Report for seeyou_RgKAFK5djSk_comments.csv
+
+| Language Code | Language Name | Count |
+|---|---|---|| en | English | 829171 |
+| und | Undetermined | 350671 |
+| pt | Portuguese | 67052 |
+| es | Spanish | 65894 |
+| id | Indonesian | 61173 |
+| af | Afrikaans | 44594 |
+| de | German | 33912 |
+| fr | French | 29335 |
+| no | Norwegian | 27295 |
+| cy | Welsh | 24355 |
+| tl | Tagalog | 21863 |
+| so | Somali | 21213 |
+| ro | Romanian | 21197 |
+| it | Italian | 18407 |
+| et | Estonian | 18285 |
+| th | Thai | 17379 |
+| error | Error | 14988 |
+| ca | Catalan | 13095 |
+| da | Danish | 12899 |
+| pl | Polish | 10527 |
+| vi | Vietnamese | 9634 |
+| nl | Dutch | 9523 |
+| ru | Russian | 9208 |
+| tr | Turkish | 9205 |
+| fi | Finnish | 8688 |
+| sw | Swahili | 7569 |
+| ja | Japanese | 6081 |
+| sv | Swedish | 5748 |
+| ar | Arabic | 5159 |
+| hr | Croatian | 4210 |
+| sl | Slovenian | 4114 |
+| lt | Lithuanian | 3582 |
+| hu | Hungarian | 3374 |
+| ko | Korean | 3241 |
+| sk | Slovak | 3120 |
+| sq | Albanian | 2305 |
+| cs | Czech | 2180 |
+| ta | Tamil | 1881 |
+| lv | Latvian | 1575 |
+| bg | Bulgarian | 1115 |
+| he | Hebrew | 692 |
+| el | Greek | 659 |
+| uk | Ukrainian | 506 |
+| fa | Persian | 481 |
+| mk | Macedonian | 469 |
+| zh-cn | Chinese (Simplified) | 452 |
+| ml | Malayalam | 213 |
+| bn | Bengali | 184 |
+| zh-tw | Chinese (Traditional) | 159 |
+| hi | Hindi | 93 |
+| ur | Urdu | 79 |
+| ne | Nepali | 25 |
+| kn | Kannada | 20 |
+| mr | Marathi | 18 |
+| te | Telugu | 10 |
+| pa | Punjabi | 4 |
+| gu | Gujarati | 1 |

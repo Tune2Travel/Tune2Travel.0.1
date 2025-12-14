@@ -1,0 +1,60 @@
+# Language Report for despa_kJQP7kiw5Fk_comments.csv
+
+| Language Code | Language Name | Count |
+|---|---|---|| en | English | 1094704 |
+| und | Undetermined | 733575 |
+| es | Spanish | 359380 |
+| pt | Portuguese | 140291 |
+| cy | Welsh | 76240 |
+| ru | Russian | 76077 |
+| ar | Arabic | 74088 |
+| it | Italian | 59257 |
+| af | Afrikaans | 54430 |
+| de | German | 53638 |
+| fr | French | 52932 |
+| tr | Turkish | 46455 |
+| so | Somali | 45551 |
+| tl | Tagalog | 41865 |
+| no | Norwegian | 34567 |
+| error | Error | 33243 |
+| vi | Vietnamese | 30988 |
+| ca | Catalan | 30906 |
+| id | Indonesian | 30015 |
+| et | Estonian | 26063 |
+| pl | Polish | 22557 |
+| da | Danish | 19723 |
+| nl | Dutch | 18686 |
+| ro | Romanian | 15158 |
+| fi | Finnish | 13520 |
+| sl | Slovenian | 11606 |
+| sw | Swahili | 10154 |
+| sv | Swedish | 9444 |
+| hr | Croatian | 9004 |
+| th | Thai | 8976 |
+| bg | Bulgarian | 8953 |
+| hu | Hungarian | 8534 |
+| ko | Korean | 7488 |
+| fa | Persian | 7014 |
+| lt | Lithuanian | 5893 |
+| sq | Albanian | 5756 |
+| sk | Slovak | 5343 |
+| ja | Japanese | 4507 |
+| uk | Ukrainian | 4431 |
+| mk | Macedonian | 4142 |
+| cs | Czech | 3498 |
+| lv | Latvian | 2785 |
+| el | Greek | 2182 |
+| he | Hebrew | 1774 |
+| ml | Malayalam | 1731 |
+| bn | Bengali | 1641 |
+| hi | Hindi | 1137 |
+| ur | Urdu | 822 |
+| zh-cn | Chinese (Simplified) | 818 |
+| ta | Tamil | 422 |
+| zh-tw | Chinese (Traditional) | 251 |
+| mr | Marathi | 174 |
+| kn | Kannada | 152 |
+| ne | Nepali | 119 |
+| te | Telugu | 82 |
+| pa | Punjabi | 80 |
+| gu | Gujarati | 47 |
